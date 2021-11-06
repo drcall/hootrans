@@ -83,8 +83,8 @@ WSGI_APPLICATION = 'hootrans.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DB_USER'), 
-        'USER': 'postgres', 
+        'NAME': 'hootrans-db', 
+        'USER': env('DB_USER'), 
         'PASSWORD': env('DB_PASSWORD'),
     }
 }
