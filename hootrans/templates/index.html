@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+{% if user.is_authenticated %}
+
+<div class="container" style = "text-align: center;">
+    <h1 class="display-4" style = "font-weight: 900;">Where to?</h1>
+    <p>Search for a place in UVA</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <input type="text" class="form-control" id="" placeholder="Location">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Destination">
+        </div>
+        <input style="background-color:#232d4b;border-color: #141e3c;" class="btn btn-primary" type="submit" value="GO!">
+    </form>
+</div>
+
+{% else %}
+<meta http-equiv="REFRESH" content="0;url=login">
+{% endif %}
+{% endblock %}
