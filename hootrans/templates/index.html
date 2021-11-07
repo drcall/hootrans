@@ -5,7 +5,9 @@
 <div class="container" style = "text-align: center;">
     <h1 class="display-4" style = "font-weight: 900;">Where to?</h1>
     <p>Search for a place in UVA</p>
-    <form>
+    
+    <form method="post">
+        {% csrf_token %}
         <div class="form-group">
           <input type="text" class="form-control" id="" placeholder="Location">
         </div>

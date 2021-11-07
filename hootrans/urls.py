@@ -22,6 +22,7 @@ from hootrans.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view()),
+    path('map/', MapView.as_view()),
     path('login/', TemplateView.as_view(template_name="login.html")),
 path("accounts/", include("allauth.urls")),
     path('logout', LogoutView.as_view()),
