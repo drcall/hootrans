@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+
 ]
 
 MIDDLEWARE = [
@@ -145,7 +146,7 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
-SITE_ID = 3
+
 # Additional configuration settings
 SOCIALACCOUNT_QUERY_EMAIL = True
 ACCOUNT_LOGOUT_ON_GET= True
@@ -159,7 +160,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend'
 ]
-
+SITE_ID = 3
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
